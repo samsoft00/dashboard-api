@@ -1,0 +1,98 @@
+[
+    {
+      "name": "Application form duly completed",
+      "title": "applicant"
+    },
+    {
+      "name": "Evidence of business inventory or stock",
+      "title": "applicant"
+    },
+    {
+      "name": "Valid ID Card i.e Driver's License, Voters Card, National ID, Intl Passport",
+      "title": "applicant"
+    },
+    {
+      "name": "Passport picture of applicant affixed",
+      "title": "applicant"
+    },
+    {
+      "name": "Credit Bureau report for applicant",
+      "title": "applicant"
+    },
+    {
+      "name": "Credit Bureau report for business entity (if applicable)",
+      "title": "applicant"
+    },
+    {
+      "name": "Evidence of business ownership (CAC Document, etc)",
+      "title": "applicant"
+    },
+    {
+      "name": "Recent utility bill (3 months) electricity, water or waste bill",
+      "title": "applicant"
+    },
+    {
+      "name": "Pictures of high value collateral items",
+      "title": "applicant"
+    },
+    {
+      "name": "Supporting documents of residence or home ownership (if applicable)",
+      "title": "applicant"
+    },
+    {
+      "name": "Relevant supporting documents of business (If applicable)",
+      "title": "applicant"
+    },
+    {
+      "name": "Assessment form completed",
+      "title": "applicant"
+    },
+    {
+      "name": "Co-Signor Valid ID Card i.e Driver's License, Voters Card, National ID, Intl Passport",
+      "title": "co-signor"
+    },
+    {
+      "name": "Passport picture of Co-Signor affixed",
+      "title": "co-signor"
+    },
+    {
+      "name": "Evidence of Co-Signor's business ownership (if applicable)",
+      "title": "co-signor"
+    },
+    {
+      "name": "Credit Bureau report for Co-Signor",
+      "title": "co-signor"
+    },
+    {
+      "name": "Relevant supporting documents of business (if applicable)",
+      "title": "co-signor"
+    },
+    {
+      "name": "Guarantor application form duly completed",
+      "title": "guarantor"
+    },
+    {
+      "name": "Guarantor Valid ID Card i.e Driver's License, Voters Card, National ID, Intl Passport",
+      "title": "guarantor"
+    },
+    {
+      "name": "Passport picture(s) of guarantor(s) affixed",
+      "title": "guarantor"
+    },
+    {
+      "name": "Credit Bureau report for guarantor(s)",
+      "title": "guarantor"
+    },
+    {
+      "name": "Evidence of guarantor(s) business ownership (if applicable)",
+      "title": "guarantor"
+    },
+    {
+      "name": "Guarantor Recent utility bill (3 months) electricity, water or waste bill",
+      "title": "guarantor"
+    },
+    {
+      "name": "Guarantor(s) Assessment form completed (if applicable)",
+      "title": "guarantor"
+    }
+  ]

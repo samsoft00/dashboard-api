@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Nigerian naira",
+      "locale": "NGN"
+    },
+    {
+      "name": "Ghanaian cedi",
+      "locale": "GHS"
+    },
+    {
+      "name": "United Arab Emirates dirham",
+      "locale": "AED"
+    },
+    {
+      "name": "EURO",
+      "locale": "EUR"
+    },
+    {
+      "name": "Pound sterling",
+      "locale": "GBP"
+    },
+    {
+      "name": "United States Dollar",
+      "locale": "USD"
+    }
+]

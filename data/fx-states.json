@@ -1,0 +1,17 @@
+[
+    {
+      "name": "NEW",
+      "slug": "NEW",
+      "message": ""
+    },
+    {
+      "name": "PROCESSING",
+      "slug": "PROCESSING",
+      "message": "Payment processed and disbursed"
+    },
+    {
+      "name": "CLOSED",
+      "slug": "CLOSED",
+      "message": "Fx Order process closed"
+    }
+]

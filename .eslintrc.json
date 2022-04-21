@@ -1,0 +1,13 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-restricted-syntax": ["BinaryExpression[operator='in']"],
+    "consistent-return": 0,
+    "camelcase": 0
+  },
+  "env": {
+    "jest": true
+  }
+}

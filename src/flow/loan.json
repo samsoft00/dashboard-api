@@ -1,0 +1,91 @@
+[
+  {
+    "step": "LOAN_OFFICER",
+    "state": "NEW",
+    "process_order": 1,
+    "roles": [
+      { "name": "Loan Officer", "role": "loan_officer", "enable": true },
+      { "name": "Team Supervisor", "role": "team_supervisor", "enable": true }
+    ],
+    "depts": [
+      { "name": "Loan Officer", "slug": "loan_officer" },
+      { "name": "Team Supervisor", "slug": "team_supervisor" }
+    ],
+    "timeline": 0
+  },
+  {
+    "step": "TEAM_SUPERVISOR",
+    "state": "IN_PROGRESS",
+    "process_order": 2,
+    "roles": [
+      { "name": "Team Supervisor", "role": "team_supervisor", "enable": false },
+      { "name": "Credit Admin", "role": "credit_admin", "enable": true }
+    ],
+    "timeline": 2
+  },
+  {
+    "step": "RISK_MANAGEMENT",
+    "state": "IN_REVIEW",
+    "stages": [
+      {
+        "stage": "initial",
+        "roles": [
+          { "name": "Head of Credit", "role": "head_credit", "enable": true },
+          { "name": "Marketing", "role": "marketing", "enable": true },
+          { "name": "Legal Department", "role": "legal_unit", "enable": true }
+        ],
+        "max_loan_amount": 500000.01,
+        "hint": "First stage risk assessment/analysis of the credit (Head Credit and Marketing and Legal Unit)",
+        "timeline": 4
+      },
+      {
+        "stage": "final",
+        "roles": [{ "name": "Risk and Compliance", "role": "risk_and_compliance", "enable": true }],
+        "hint": "Second stage of risk assessment/analysis (Risk and Compliance)",
+        "max_loan_amount": 1000000000.01,
+        "timeline": 24
+      }
+    ],
+    "process_order": 3,
+    "timeline": 28
+  },
+  {
+    "step": "MANAGEMENT",
+    "state": "MD_APPROVAL",
+    "process_order": 4,
+    "roles": [
+      { "name": "Chief Commercial Officer", "role": "cco", "enable": true },
+      { "name": "Managing Director", "role": "managing_director", "enable": true },
+      { "name": "Credit Committee", "role": "credit_committee", "enable": true },
+      { "name": "Board Member", "role": "board_member", "enable": true }
+    ],
+    "timeline": 24
+  },
+  {
+    "step": "LOAN_OFFICER",
+    "state": "OFFER_LETTER",
+    "process_order": 0,
+    "roles": [
+      { "name": "Loan Officer", "role": "loan_officer", "enable": true },
+      { "name": "Team Supervisor", "role": "team_supervisor", "enable": true }
+    ],
+    "timeline": 5
+  },
+  {
+    "step": "OPERATION",
+    "state": "DISBURSEMENT",
+    "process_order": 5,
+    "roles": [
+      { "name": "Financial Operation", "role": "financial_operations", "enable": true },
+      { "name": "Chief Financial Officer", "role": "chief_financial_officer", "enable": true }
+    ],
+    "timeline": 2
+  },
+  {
+    "step": "AUDIT",
+    "state": "AUDIT",
+    "process_order": 6,
+    "roles": [{ "name": "Internal Control and Audit", "role": "audit", "enable": false }],
+    "timeline": 2
+  }  
+]

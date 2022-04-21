@@ -1,0 +1,9 @@
+[
+    { "name": "None" },
+    { "name": "Primary" },
+    { "name": "Secondary" },
+    { "name": "Higher Institution" },
+    { "name": "Master" },
+    { "name": "Ph. D" },
+    { "name": "Other" }
+]

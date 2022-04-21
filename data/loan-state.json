@@ -1,0 +1,12 @@
+[
+    { "name": "NEW", "slug": "NEW", "order": 1 },
+    { "name": "UPDATE REQUIRED", "slug": "UPDATE_REQUIRED", "order": 2 },
+    { "name": "IN REVIEW", "slug": "IN_REVIEW", "order": 3 },
+    { "name": "MD APPROVAL", "slug": "MD_APPROVAL", "order": 4 },
+    { "name": "DISBURSEMENT", "slug": "DISBURSEMENT", "order": 5 },
+    { "name": "REJECTED", "slug": "REJECTED", "order": 6 },
+    { "name": "CLOSED", "slug": "CLOSED", "order": 7 },
+    { "name": "AUDIT", "slug": "AUDIT", "order": 6 },
+    { "name": "OFFER LETTER", "slug": "OFFER_LETTER", "order": 5 },
+    { "name": "IN PROGRESS", "slug": "IN_PROGRESS", "order": 2 }  
+  ]

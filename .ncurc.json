@@ -1,0 +1,7 @@
+{
+    "reject": [
+        "sequelize",
+        "sequelize-cli",
+        "sequelize-paginate"
+    ]
+}

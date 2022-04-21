@@ -1,0 +1,92 @@
+[
+    {
+      "fullname": "Odigie Newton",
+      "email": "newton.imonjirie@canarypointcs.com",
+      "password": "NMUODeurVq",
+      "username": "emp_newton",
+      "phone_number": "09057387046",
+      "department_id": 1,
+      "roles": ["EMPLOYEE", "LOAN_OFFICER"]
+    },
+    {
+      "fullname": "Olaoye Joseph",
+      "email": "olaoye.joseph@canarypointcs.com",
+      "password": "fKjIoftqqz",
+      "username": "jolaoye",
+      "phone_number": "07067728442",
+      "department_id": 2,
+      "roles": ["EMPLOYEE", "TEAM_SUPERVISOR"]
+    },
+    {
+      "fullname": "Oyewole Samuel",
+      "email": "oyewoleabayomi@canarypointcs.com",
+      "password": "jIbCAlGOnG",
+      "username": "samsoft",
+      "phone_number": "07063317344",
+      "department_id": 3,
+      "roles": ["EMPLOYEE", "RISK_AND_COMPLIANCE"]
+    },
+    {
+      "fullname": "Emem Samuel",
+      "email": "emem.samuel@canarypointcs.com",
+      "password": "KmPDHzxpht",
+      "username": "esamuel",
+      "phone_number": "08067028442",
+      "department_id": 2,
+      "roles": ["EMPLOYEE", "CREDIT_ADMIN"]
+    },
+    {
+      "fullname": "Imonjirie Newton",
+      "email": "newtonimonjirie@canarypointcs.com",
+      "password": "fhgBMkNXhX",
+      "username": "devnewton",
+      "phone_number": "09030759054",
+      "department_id": 4,
+      "roles": ["EMPLOYEE", "HEAD_CREDIT", "MARKETING", "LEGAL_UNIT", "CHIEF_FINANCIAL_OFFICER"]
+    },
+    {
+      "fullname": "iron lucius",
+      "email": "ironlucius@canarypointcs.com",
+      "password": "EHfAXoviTy",
+      "username": "ironlucius",
+      "phone_number": "08067007776",
+      "department_id": 4,
+      "roles": ["EMPLOYEE", "CCO", "MANAGING_DIRECTOR"]
+    },
+    {
+      "fullname": "Olivia Cockburn",
+      "email": "cockhurn@canarypointcs.com",
+      "password": "ATfAZoviTy",
+      "username": "oliviacoco",
+      "phone_number": "08077915571",
+      "department_id": 10,
+      "roles": ["EMPLOYEE", "FINANCIAL_OPERATIONS"]
+    },
+    {
+      "fullname": "Laura Jeanne",
+      "email": "jeanne@canarypointcs.com",
+      "password": "RHfQXoviTz",
+      "username": "jeanne",
+      "phone_number": "08087056923",
+      "department_id": 8,
+      "roles": ["EMPLOYEE", "AUDIT"]
+    },
+    {
+      "fullname": "Katy Perry",
+      "email": "katyperry@canarypointcs.com",
+      "password": "YHfXToviAy",
+      "username": "katy",
+      "phone_number": "08067776590",
+      "department_id": 4,
+      "roles": ["EMPLOYEE", "CREDIT_COMMITTEE", "BOARD_MEMBER"]
+    },
+    {
+      "fullname": "Oyinkansola Osinubi",
+      "email": "oyin.osinubi@canarypointcs.com",
+      "password": "YHfXToviAyDbc",
+      "username": "oyinubi",
+      "phone_number": "08082736591",
+      "department_id": 11,
+      "roles": []
+    }    
+  ]

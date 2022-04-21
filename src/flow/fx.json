@@ -1,0 +1,22 @@
+[
+  {
+    "step": "RELATION_OFFICER",
+    "state": "New",
+    "process_order": 1
+  },
+  {
+    "step": "INTERNAL_CONTROL",
+    "state": "Processing",
+    "process_order": 2
+  },
+  {
+    "step": "OPERATION",
+    "state": "Processing",
+    "process_order": 3
+  },
+  {
+    "step": "AUDIT",
+    "state": "Closed",
+    "process_order": 4
+  }
+]

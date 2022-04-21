@@ -1,0 +1,93 @@
+[
+    {
+      "name": "ADMIN",
+      "code": "ADMIN",
+      "description": "admin description here"
+    },
+    {
+      "name": "LOAN HEAD",
+      "code": "LOAN_HEAD",
+      "description":
+        "Loan head role will be able to close or reject loan application at any point"
+    },
+    {
+      "name": "EMPLOYEE",
+      "code": "EMPLOYEE",
+      "description": "staff description here"
+    },
+    {
+      "name": "LOAN OFFICER",
+      "code": "LOAN_OFFICER",
+      "description": "Loan officer evaluate and process credit and loan applications"
+    },
+    {
+      "name": "TEAM SUPERVISOR",
+      "code": "TEAM_SUPERVISOR",
+      "description": "Team supervisor responsibilities is managing a team"
+    }, 
+    {
+      "name": "CREDIT ADMIN",
+      "code": "CREDIT_ADMIN",
+      "description": "As a credit administrator, responsibilities are to analyze a loan applicant's credit score to determine their credit risk and ability to pay back the loan"
+    },
+    {
+      "name": "HEAD OF CREDIT",
+      "code": "HEAD_CREDIT",
+      "description": "Responsible for the review and approval of commercial credit proposals of the Bank"
+    },
+    {
+      "name": "MARKETING",
+      "code": "MARKETING",
+      "description": "monitor market trends, create advertising campaigns"
+    },  
+    {
+      "name": "LEGAL DEPARTMENT",
+      "code": "LEGAL_UNIT",
+      "description": "Legal dept to monitor and/or advise on all legal matters, commercial contracts, and agreements"
+    },
+    {
+      "name": "RISK AND COMPLIANCE",
+      "code": "RISK_AND_COMPLIANCE",
+      "description": "help the organizations to conform with guidelines and associated rules and regulations"
+    },
+    {
+      "name": "CHIEF COMMERCIAL OFFICER",
+      "code": "CCO",
+      "description": "CEO and other Heads of Department"
+    },
+    {
+      "name": "MANAGING DIRECTOR",
+      "code": "MANAGING_DIRECTOR",
+      "description": "direct and control the all business operations"
+    },  
+    {
+      "name": "CREDIT COMMITTEE",
+      "code": "CREDIT_COMMITTEE",
+      "description": "approval of credit facilities"
+    },
+    {
+      "name": "BOARD MEMBER",
+      "code": "BOARD_MEMBER",
+      "description": "governing body of an organization"
+    }, 
+    {
+      "name": "INTERNAL CONTROL AND AUDIT",
+      "code": "AUDIT",
+      "description": "provide organizations with guidance on financial accuracy, internal controls and regulatory compliance"
+    }, 
+    {
+      "name": "FINANCIAL OPERATION",
+      "code": "FINANCIAL_OPERATIONS",
+      "description": "lead the finance/accounting function and team"
+    },
+    {
+      "name": "CHIEF FINANCIAL OFFICER",
+      "code": "CHIEF_FINANCIAL_OFFICER",
+      "description": "senior executive responsible for managing the financial actions of a company"
+    },
+    {
+      "name": "BDC",
+      "code": "BDC",
+      "description": "Handle Bureau De Change activities (Donnette BDC & Sebastian BDC)"
+    }                                                                                                     
+  ]

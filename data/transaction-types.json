@@ -1,0 +1,6 @@
+[
+    { "name": "Swap" }, 
+    { "name": "Refund" }, 
+    { "name": "Inflow" }, 
+    { "name": "Outflow" }
+]

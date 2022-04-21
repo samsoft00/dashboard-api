@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Loan Officer",
+    "description":
+      "A loan officer is a representative of a bank, credit union, or other financial institution who assists borrowers in the application process",
+    "loan_process_order": 1
+  },
+  {
+    "name": "Team Supervisor",
+    "description": "About loan supervisor",
+    "loan_process_order": 2
+  },
+  {
+    "name": "Risk Management",
+    "description": "about risk manager",
+    "loan_process_order": 3
+  },
+  {
+    "name": "Management",
+    "description":
+      "The person who is in overall charge of the running of an organization or business",
+    "loan_process_order": 4
+  },
+  {
+    "name": "Operation",
+    "description": "About operation",
+    "loan_process_order": 5
+  },
+  {
+    "name": "Information Technology",
+    "description": "About IT",
+    "loan_process_order": 6
+  },
+  {
+    "name": "Relation Officer",
+    "description":
+      "Relation officer handle the concerns of the people who buy their company's products or services. They work to rectify issues experienced by individual customers as well as aim to improve the organization's overall customer satisfaction ratings.",
+    "loan_process_order": 1
+  },
+  {
+    "name": "Audit",
+    "description": "Financial Auditor to handle payment processed",
+    "loan_process_order": 7
+  },  
+  {
+    "name": "Internal Control",
+    "description":
+      "Internal controls are the mechanisms, rules, and procedures implemented by a company to ensure the integrity of financial and accounting information, promote accountability, and prevent fraud",
+    "loan_process_order": 2
+  },
+  {
+    "name": "Finance",
+    "description": "Finance handle payout and management of large amounts of money",
+    "loan_process_order": 3
+  },    
+  {
+    "name": "Donnette BDC",
+    "loan_process_order": 0,
+    "description": "About Donnette BDC"
+  },
+  {
+    "name": "Sebastian BDC",
+    "loan_process_order": 0,
+    "description": "About Sebastian BDC"
+  }
+]
