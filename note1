@@ -1,0 +1,351 @@
+NODE_CONFIG_DIR=./src/configs npm run migrate:up
+NODE_CONFIG_DIR=./src/configs npx sequelize db:seed --seed 20201102172513-SeedTransactionTypes.js
+NODE_CONFIG_DIR=./src/configs npx sequelize db:migrate --to 20201103164412-modify-fxorder-remove-order-type.js
+
+
+1. Add Test to dashboard
+    - User
+    - Loan
+    - Fx Order
+2. Drop invoice_no column, use reference_no instead
+3. Increase fx order reference number
+4. 
+
+ // User
+ 1. throw error if user email is valid
+ 2. Admin should be able to add user
+
+it('store the credentials to file', (done) => {});
+it('return user payload using auth token', (done) => {});
+it('should refresh token', (done) => {});
+it('should reset password', (done) => {});
+
+
+
+TASKS:
+1. Generating refrence number (ticket ID) serially (e.g. 5000 > 5001 > 5002 etc). - 
+
+We need an API that allows us get dashboard users by department, we need to trim down the list for assigning both for loans and fx, because right now, the loan officers can't see one of their supervisors on the list because it is only showing 20.
+
+
+JOB
+
+https://www.wave.com/en/careers/job/?gh_jid=4278511002?gh_jid=4278511002
+https://twitter.com/nodejs/status/1334183893851910150
+
+
+https://apply.workable.com/minderacraft/j/BB6B63E323/
+https://atani.com/careers
+
+
+Integrate credequity API for dashboard use
+Update Loans to include source
+FX news on the dashboard
+Attach supporting documents to order
+
+-
+
+They will be able to manage their profile info like Name, location, and can create a new loan application.
+
+- Loan processing service
+Speed-up the KYC verification and approval by enable Relation Officers to upload customer's original documents, which can be view at each stages. 
+
+Create a consumable JSON endpoint to access borrower KYC (Name, location) before create a new loan application.
+
+1. loan report
+2. stages and state management
+3. loan summary API
+
+- Forex ordering service
+- Know Your Customer (KYC) service 
+
+
+Next on Digging Deep
+- Upload file directly to third-party endpoint/bucket (S3, Google, etc)
+
+---------
+
+Include the following in my CV
+1. Azure
+2. GCP
+3. AWS
+4. GraphQL
+6. CI/CD Implementation
+
+Include api documentation
+Add "Manage infrastructure, etc"
+
+I'm a software engineer (Backend) with 8+ years of experience, building APIs, supporting open sources, raising the next generation of engineers, and evangelists. I’m currently working as a Senior Engineer at CanaryPoint. I was also a Software Consultant for almost 1 year at Addenda Lab, UAE before joining CanaryPoint. I have worked in the Fintech, Insurance, and Data Management industries.
+
+I'm a software engineer (Backend) with 8+ years of experience, building APIs, supporting open sources, raising the next generation of engineers, and evangelists. Senior Backend Engineer at CanaryPoint, Formerly Software Consultant at Addenda Lab, UAE. I have worked in the Fintech, Insurance, and Data Management industries.
+
+PROJECTS 
+Tribe Homes: Built and Manage tribe.homes landing page using Angular and set up an email service using NodeJs to send confirmation email to subscribers.
+Security Igloo: Work remotely with Moodit team to develop Security Igloo application using Angular, the application helps companies to manage cyber security.
+Meatify NG: Co-founder and Team lead, manage team to Design and Developed API endpoint for both web and mobile application, handle user authentication using firebase admin sdk, MochaJs for testing and ApiDoc for a simple documentation
+
+TECHNICAL SKILLS 
+DevOps: CI/CD processes, Kubernetes, Docker, Jenkins
+Test Driven development: Mocha, PHPUnit, Jasmine, Jest
+Database: MySQL, PostgreSQL, MongoDB, SQLite, Firebase
+Web Services using Node.Js, NestJs, GraphQL, Lumen, Spring, Laravel
+Studying: System Design Expert and Data Science
+
+-
+
+Build up a library of personal statements, achievements and skills that you can interchange within your CV to match the role specification.
+
+//
+- Tell me about yourself - story telling
+- Are you the right person for the job.
+- Why interested in toptal
+- Strength and weakness
+- Show enthusiasm for the role
+
+Name: Morris
+
+INTRO:
+My name is Samuel, i have been in software profession for over 8 years managing all aspects of the development process for startups to medium-sized companies, Work with Cross-cultural team of engineers.
+
+building APIs, supporting open sources, raising the next generation of engineers, and wanna be evangelists. I’m currently working as a Senior Engineer at CanaryPoint. I was also a Software Consultant for almost 1 year at Addenda Lab, UAE before joining CanaryPoint. I have worked in the Fintech, Insurance tech, and Data Management industries
+
+EXPERIENCE / ACHIEVEMENT
+- Train and mentor couple of engineers.
+- Help startups to scale development processes.
+
+- Developed Execl support for flatfile, which attracts new customers & investors.
+
+- Implement CI/CD processes to improve collaboration among the team.
+- Improved productivity & speed by decomposing existing monolithic applications into manageable micro-services.
+
+- Automate loan process to manage millions of applicants, enable Loan Officers to evaluate risk, make a credit decision, disburse funds, or decline the application.
+- Speed-up the KYC verification and approval.
+
+WHY TOPTAL
+I see this opportunity as a way to contribute to an exciting/forward-thinking/fast-moving company/industry.
+
+
+Your name
+Your educational background/achievements—college's as well as school's
+Your most significant work experience/achievement
+Your hobbies, with more emphasis on your passion(s). You could support the same with an example perhaps
+Thing(s) in life/career that matter(s) the most to you
+Why are you interviewing for their company
+Try to think of a one-liner about you to end with. Probably the motto of your life
+
+
+====================================
+
+I have 8+ years of experience building complex, distributed, large scale systems architectures, such as microservices, event-driven architectures. 
+
+I have 2+ years startup experience, so, i know what it means to work in a startup, wearing many hats, still deliever in response to user needs.
+
+I have worked with a number of  real world application used by millions of users so i've dealt with  real world  performance and scalability issue.
+
+Currently, Senior Backend Engineer at CanaryPoint, where i build, implement, and maintain core banking solutions for CanaryPoint subsidiary (Assets Microfinance Bank).
+
+Formerly Software Consultant at Addenda Lab, UAE. where with a Cross-cultural team of engineers to automate and streamline processes between insurance companies in UAE.
+
+
+
+Vanhack Code challenge
+========================================
+- Node.JS code verification challenge
+- Javascript Code verification challenge
+- Nodejs Code Verification Challenge
+- PHP Code verification Challenge
+- ReactJS code verification challenge
+- SQL code verification challenge
+- Typescript and Vue.js verification challenge
+
+
+
+WRITE Up
+- How to perform soft delete in sequelize?
+
+
+List of endpoint to cache
+=========================
+- Get all dept
+- Get Department by ID
+- Get User by dept
+- Get all states
+- Get Cities by states
+- Get Lga by State
+- Get Cities and Lga by State
+- Get all Education type
+- Get Education by ID
+- All Miscellaneus
+ - Get loan type
+ - Get loan states
+ - Get Occupation
+ - Get Identity type
+ - Get banks
+ - Get Business Employment Type
+ - Get CheckList
+ - Get Loan Sources
+ - Get Loan Summary *
+
+"When the sun shines, we shine together" ~ Daniel 12: 3
+"Told you i'll be here forever" ~ Romans 8:38-39
+"I'll always be your friend" ~ John 15:13-15
+"Took an oath that i'll stick it out till the end" ~ Zephaniah 3:17
+
+
+UPDATE_REQUIRED
+REJECTED
+
+Godson
+- Each state will hold timeline of each state +
+- Create endpoint to get all states for user to move backward only +
+- Create list approval authority table when loan is move from TEAM_SUPERVISOR && < 100000.
+- Add can_approve to loan if logged-in user role is in the list
+- if loan is in RISK and is < 100000, it's move directly to internal Control and Audit, else move to next stage.
+- Rejected/Closed loan will be accessible by AUDIT
+- request_update, rejected, closed ~ are out of state, they'll only re-align with switch statement.
+
+- OFFER_LETTER -> state.
+- Add title, discription to state
+
+
+    [
+      sequelize.literal(`(
+    SELECT name FROM roles WHERE roles.id = approve_authority.role_id
+  )`),
+      'authority',
+    ],
+
+
+                  // if in RISK, check the loan amount & user role to determine next stage, if role is head credit & loan is below 100k => state - OFFER_LETTER else move to state - MD_APPROVAL
+      if (currentStep.slug === 'RISK_MANAGEMENT' && loan.approve_authority.length) {
+        if (!user.isHeadCredit()) throw new CustomError();
+        nextState = 'OFFER_LETTER';
+        nextSteps = 'LOAN_OFFICER';
+
+        return;
+      }
+
+          
+
+HOT ~ 30,000 ~ 82.37
+CRO ~ 500 ~ 112.33
+XLM ~ 253 ~ 100.86
+$8.79
+
+295 pound.
+-
+Bit Digital Inc
+Churchhill Capital Corp VI
+
+
+----
+Drop the following column from loan_application and
+add column applicant_id (integer)
+create new applicants table with the following column
+
+BASIC INFO
+-----------
+- id
+- title
+- name
+- mother_maiden_name
+- email_address
+- date_of_birth
+- gender
+- phone_number
+- marital_status
+- home_address
+- landmark
+
+- religion
+- place_of_worship
+- spouse_id
+- identification_id
+- occupation_id
+- place_of_birth_id
+- lga_id
+- client_bank_id
+
+- business_employment_id
+
+Note: 
+Client bank: 1-M
+Phone Number: 1-M
+
+
+Frontend
+USER: LOAN OFFICER/ SUPERVISOR
+ROLE: LOAN OFFICER/ SUPERVISOR
+
+1. Create new page under loan menu "Loan Applicants" or simply "Applicants" - Display list of loan applicants. List should have button to view "loan history" and create "new loan"
+
+2. Provide advance search functionalities for LOAN OFFICER/SUPERVISOR to search by name or phone number, if the results corespond to their record, user should be able view applicant loan histories or request for new loan.
+
+3. LOAN HISTORY PAGE
+Display partial "applicant" data (BASIC INFO), user can view more by clicking "...view more", then display Loan histories in tabular form.
+- #
+- Refrence No
+- Amount
+- Purpose
+- Status (Completed or Progress), "Progress" if loan current_state is not CLOSED.
+- Type
+- Source
+- Created Date
+
+On this table, user should be able to perform the following action:
+a. Loan full details: 
+Redirect user to loan detail page or display the loan details on a modal.
+
+b. Duplicate: This create a copy of this loan as NEW LOAN
+
+4. NEW LOAN
+a. Create Applicant on "Loan Applicant" page.
+b. Go to Loan
+
+-
+
+I'm an experienced software engineer who constantly seeks out innovative solutions to everyday problems.
+
+I have 8+ years of experience building complex, distributed, large scale systems architectures, such as microservices, event-driven architectures. 
+
+I have 2+ years startup experience, so, i know what it means to work in a startup, wearing many hats, still deliever in response to user needs.
+
+I have worked with a number of real world application used by millions of users so i've dealt with  real world  performance and scalability issue.
+
+Currently, Senior Backend Engineer at CanaryPoint, where i build, implement, and maintain core banking solutions for CanaryPoint subsidiary (Assets Microfinance Bank).
+
+Previously (Formerly) Software Consultant at Addenda Lab, UAE. where with a Cross-cultural team of engineers to automate and streamline processes between insurance companies in UAE.
+
+
+
+-
+
+
+I have experience working with the following languages/Framework Javascript (Nodejs) with Typescript and a bit Reactjs, Golang though I started my career using Php in 2014.
+
+Move to Javascript after some months, spend night watching Youtube video, reading examples on github, I love using JavaScript because it’s such an elegant language with so many purposes, I have developed core banking application and other internal tool using Nodejs.
+
+At the beginning of this year (2021), i started looking into Golang, because of its fast, scalable and secure for web development, started by picking ebooks on packtpub.com, then start contributing to open sources using the knowledge I've gain.
+
+
+-
+
+
+I like to bring ideas to life through code.
+
+I watched my first python tutorial with the intention of creating games. But the more I learned about programming, the more intrigued I became with all of its facets, and I took it upon myself to learn more about coding. Some of my strengths include:
+* Fullstack Software Development
+* Website/App Development
+* Setting up software architecture
+
+Additionally, I have experience with project management, leading a team, hiring new employees and managing all client interactions throughout the project workflow.
+
+As CTO of Inheaden - a software consulting and IT startup based in Darmstadt - I’ve handled many client projects, and one of my favourites has to be the Grovy app. We developed this hybrid application that runs on a serverless platform on a big cloud provider in just 8 weeks, from the concept stage to a final, usable product. I have also had the tremendous joy of watching my team grow from 2 members to 8 in just over a year, and we are constantly juggling anywhere between 2 to 4 projects at a time.
+
+As a self-taught programmer, I’ve learned that tutorials are important but practice makes the most tangible difference. Starting your coding journey can be daunting but once you begin, chances are you’ll never look back, just like me. I started with python, which is great for any beginner, but I am also proficient in:
+* TypeScript
+* Golang
+* Java
+* C#
+
+Coding is my passion. The goal is to amass both knowledge and experience so I can coach and guide others as they provide valuable services and bring their own projects to life. When I’m not working, I enjoy working out, swimming or listening to a good audiobook.

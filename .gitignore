@@ -46,8 +46,6 @@ node_modules
 dist/
 .vscode
 invoices
-note1
-note.txt
 2c6eaee810d1.json
 .gitlab-ci.yml
 stream-yard.txt

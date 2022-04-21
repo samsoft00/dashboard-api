@@ -1,0 +1,613 @@
+Task
+1. Your bdc orders/fx orders and loan tables don't have a column for the userid that created the entries. Please let's rectify this.
+2. Also, on the bdc orders, include a column for bdc company, which would be either Donnette or Sebastian
+3. Create a new role on Loans, call it, Risk Viewer, they're in Risk Management Department, can only view loans in that department but cannot do anything else, can't assign to anybody else. Unless the loan is 3 million or less
+4. Also remove the audit department from the loan process, they don't add any value.
+
+- Okay, let's include this and also a column for payment type and payment destination
+
+That is for sale and purchases.
+- Payment type is cash or account transfer
+- Payment destination is cash or bank account it was paid to
+
+
+{
+  "loan_amount": "",
+  "repayment_frequency": "",
+  "monthly_repayment_amount":"",
+  "maturity_tenor": "",
+  "collateral_offered": "",
+  "loan_purpose": "",
+  "bank_id": "",
+  "account_number": "",
+  "bvn": "",
+  "account_name": "",
+}
+
+
+get() {return parseFloat(this.getDataValue('monthly_income'));},
+
+APPLICANT
+---
+{
+    "name": "Arianna Murphy",
+    "title": "Mrs",
+    "date_of_birth": "1963-11-26",
+    "gender": "female",
+    "marital_status": "single",
+    "home_address": "17a Dele Adedeji Street, Off Bisola Durosinmi-Etti Street, Lekki Phase I -Lagos",
+    "landmark": "Lekki Phase I",
+    "religion": "Christian",
+    "place_of_worship": "The Redeemed Christian Church of God",
+    "mother_maiden_name": "Sharon",
+    "email_address": "lynch.albin@neocede.ml",
+    "place_of_issuance": "Lagos",
+    "bvn": "783022293022", // unique/index
+
+    "id_card_number": "5121758683030098",
+    "date_issued": "2017-08-12",
+    "expiry_date_issued": "2020-09-23",
+    "identity_type_id": 3,
+
+    "spouse_name": "Mr Murphy Anthony",
+    "spouse_phone_number": "07045515280",
+    "spouse_occupation_id": 1,
+    
+    "education_id": 5,
+    "occupation_id": 1,
+    "lga_id": 503,
+    "place_of_birth_id": 25
+}
+
+applicant_phone
+[{
+  "applicant_id": ,
+  "type": [Mobile, Landline, Other],
+  "phone_number": "08145515280", // unique
+}]
+
+// bank
+[{
+  "applicant_id": ,
+  "bank_id": 37,
+  "account_number": "0023091211", //index and unique
+  "account_name": "Jinadu Ewele David"  
+}]
+
+[{
+    "applicant_id": "",
+    "name": "Canary Point Corporate Services",
+    "employment_type_id": 3,
+    "office_address": "17a Dele Adedeji Street, Off Bisola Durosinmi-Etti Street, Lekki Phase I -Lagos. Nigeria",
+    "activity": "Micro-finance banking",
+    "year_of_experience": 10,
+    "office_phone_no": "01-6329480",
+    "email_address": "info@canarypointcs.com",
+    "position": "Manager Directory",
+    "monthly_income": "1,230,200",
+    "monthly_expenses": "230,000"
+}]
+
+// loan application
+{
+  "applicant_id": "",
+  "loan_amount": "7,000,000",
+  "repayment_frequency": "monthly",
+  "monthly_repayment_amount":"1,000,000",
+  "maturity_tenor": "1 year",
+  "collateral_offered": "Beautiful house in banana highland",
+  "purpose": "Increase production of cannabis in the east",
+
+  "repeat_loan": false,
+  "loan_source_id": 1,
+  "loan_type_id": 2,
+  "registration_status",
+  "require_approval"
+  "current_state_id"
+  "current_step_id"
+  "loan_source_id"
+  "business_id"
+  
+  "tag",
+  "place_of_issuance" // <-- ask question on this.
+  "client_bank_id"
+
+  "created_at"
+  "updated_at"
+  "deleted_at"  
+}
+
+
+/**
+ * Loan Application STEPS (Department)
+ * 1. NEW (LOAN_OFFICER)
+ * 2. LOAN_SUPERVISOR
+ * 3. RISK_MANAGEMENT
+ * 4. MD (MANAGING_DIRECTOR)
+ * 5. OPERATION
+ *
+ * Loan STATES
+ * 1. NEW
+ * 2. UPDATE_REQUIRED
+ * 3. IN_REVIEW
+ * 4. MD_APPROVAL
+ * 5. DISBURSEMENT
+ * 6. CLOSED
+ *
+ * LOAN LOGS
+ * loan_id: LoanApplicatn <-
+ * from: STATES
+ * to: STATES <-
+ * from_who: User
+ * to_who: User | null
+ * current_desk: STEPS <-
+ * timestamp: Date
+ * comment: text
+ *
+ * REGISTRATION STAGES
+ * 1. Stage 1 - Application & Spouse
+ * 2. Stage 2 - Business/Employment Detail
+ * 4. Stage 3 - Loan & Bank Details
+ * 5. Stage 4 - Upload required documents
+ *
+ *
+ * CHECKLIST
+ * Application form duly completed
+ * Valid ID Card i.e Driver's License, Voters Card, National ID, Intl Passport
+ * Passport picture of applicant affixed
+ * Credit Bureau report for applicant
+ * Credit Bureau report for business entity (if applicable)
+ * Evidence of business ownership (CAC Document, etc)
+ * Recent utility bill (3 months) electricity, water or waste bill
+ * Pictures of high value collateral items
+ * Supporting documents of residence or home ownership (if applicable)
+ * Relevant supporting documents of business (If applicable)
+ * Assessment form completed
+ *
+ * Co-Signor
+ * ===========
+ * Co-Signor Valid ID Card i.e Driver's License, Voters Card, National ID, Intl Passport
+ * Passport picture of Co-Signor affixed
+ * Evidence of Co-Signor's business ownership (if applicable)
+ * Credit Bureau report for Co-Signor
+ * Relevant supporting documents  of business (if applicable)
+ *
+ * Guarantor
+ * ===========
+ * Guarantor Valid ID Card i.e Driver's License, Voters Card, National ID, Intl Passport
+ * Passport picture(s) of guarantor(s) affixed
+ * Credit Bureau report for guarantor(s)
+ * Evidence of guarantor(s) business ownership (if applicable)
+ * Guarantor Recent utility bill (3 months) electricity, water or waste bill
+ * Guarantor(s) Assessment form completed (if applicable)
+ *
+ * check_list_loan_app
+ * check_list_id
+ * loan_application_id
+ * doc_url
+ *
+ * [https://stackoverflow.com/questions/31579509/can-pm2-run-an-npm-start-script]
+ * [NODE_CONFIG_DIR=./src/configs pm2 start npm --name "dashboard-api-v1" -- run "start"]
+ */
+
+ // complete loan app file Upload
+ // update fetch by dept, 
+ // Loan update
+
+1. Endpoint to fetch single loan application, what i have is GET all
+2. Endpoint to fetch list of uploaded documents for each loan application
+
+--no-warnings
+
+/**
+  * invoice_no
+  * order_no
+  * check -> total
+  * status
+  * id
+  * INTERNAL_CONTROL
+  * message
+  * 
+  * id
+  * FINANCE
+  * message
+  * 
+  * id
+  * PROCESSED
+  * message
+  * 
+  * step: Department
+  * 1. Relation Officer
+    2. Internal Control
+    3. Finance (Payout)
+  */
+
+  /**
+   * Get loan applications by state
+   */
+  static async getLoanAppByState(req, res) {
+    const { page, limit } = req.query;
+    const { state_id } = req.params;
+
+    const currentPage = parseInt(page) || 1;
+    const defaultLimit = parseInt(limit) || 20;
+
+    try {
+      const pagOptns = pagHandler(currentPage, defaultLimit);
+
+      const options = {
+        ...pagOptns,
+        include: [
+          { model: ClientSpouse, as: 'spouse' },
+          { model: LoanType, as: 'loan_type' },
+          { model: LoanState, as: 'current_state', where: { id: state_id } },
+          { model: Department, as: 'current_step' },
+          { model: Identification, as: 'identification' },
+          { model: State, as: 'place_of_birth' },
+          { model: Lga, as: 'lga' },
+          { model: Occupation, as: 'occupation' },
+          { model: Education, as: 'education' },
+          { model: BusinessEmployment, as: 'business_employment' },
+          { model: ClientBank, as: 'bank' },
+          { model: LoanDetail, as: 'loan_detail' },
+          { model: LoanLogs, as: 'logs' },
+        ],
+      };
+
+      const loans = await LoanApplication.paginate(options);
+
+      util.setPagination(new Paginate(loans, currentPage, defaultLimit));
+      util.setSuccess(200, 'successful', loans.docs);
+
+      return util.send(res);
+    } catch (error) {
+      return util.setError(error.statusCode || 400, error.message).send(res);
+    }
+  }
+
+  /**
+   * Get loan applications by department
+   */
+  static async getLoanAppByDept(req, res) {
+    const { page, limit } = req.query;
+    const { dept_id } = req.params;
+
+    const currentPage = parseInt(page) || 1;
+    const defaultLimit = parseInt(limit) || 20;
+
+    try {
+      const pagOptns = pagHandler(currentPage, defaultLimit);
+
+      const options = {
+        ...pagOptns,
+        include: [
+          { model: ClientSpouse, as: 'spouse' },
+          { model: LoanState, as: 'current_state' },
+          { model: Department, as: 'current_step', where: { id: dept_id } },
+          { model: LoanType, as: 'loan_type' },
+          { model: Identification },
+          { model: Education, as: 'education' },
+          { model: Occupation, as: 'occupation' },
+          { model: State, as: 'place_of_birth' },
+          { model: Lga, as: 'lga' },
+          { model: BusinessEmployment, as: 'business_employment' },
+          { model: LoanDetail, as: 'loan_detail' },
+          { model: ClientBank, as: 'bank' },
+          { model: LoanLogs, as: 'logs' },
+        ],
+      };
+
+      const loans = await LoanApplication.paginate(options);
+
+      util.setPagination(new Paginate(loans, currentPage, defaultLimit));
+      util.setSuccess(200, 'successful', loans.docs);
+
+      return util.send(res);
+    } catch (error) {
+      return util.setError(error.statusCode || 400, error.message).send(res);
+    }
+  }
+
+  /**
+   * Get loan applications assigned to user
+   */
+  static async getLoanAppAssignToUser(req, res) {
+    // const { user } = req;
+    const { user_id } = req.params;
+    const { page, limit } = req.query;
+
+    const currentPage = parseInt(page) || 1;
+    const defaultLimit = parseInt(limit) || 20;
+
+    try {
+      const user = await User.findByPk(user_id);
+      if (!user) throw new Error(`User with ID ${user_id} not found!`);
+
+      const pagOptns = pagHandler(currentPage, defaultLimit);
+
+      const options = {
+        ...pagOptns,
+        include: [
+          { model: ClientSpouse, as: 'spouse' },
+          { model: LoanState, as: 'current_state' },
+          { model: Department, as: 'current_step' },
+          { model: LoanType, as: 'loan_type' },
+          { model: Identification },
+          { model: Education, as: 'education' },
+          { model: Occupation, as: 'occupation' },
+          { model: State, as: 'place_of_birth' },
+          { model: Lga, as: 'lga' },
+          { model: BusinessEmployment, as: 'business_employment' },
+          { model: LoanDetail, as: 'loan_detail' },
+          { model: ClientBank, as: 'bank' },
+          { model: LoanLogs, as: 'logs', where: { id: user_id } },
+        ],
+      };
+
+      const loans = await LoanApplication.paginate(options);
+
+      util.setPagination(new Paginate(loans, currentPage, defaultLimit));
+      util.setSuccess(200, 'successful', loans.docs);
+
+      return util.send(res);
+    } catch (error) {
+      return util.setError(error.statusCode || 400, error.message).send(res);
+    }
+  }
+
+
+  static async getAllLoanApplication(req, res) {
+    const { page, limit } = req.query;
+
+    try {
+      const currentPage = parseInt(page) || 1;
+      const defaultLimit = parseInt(limit) || 20;
+      const pagOptns = pagHandler(currentPage, defaultLimit, 'created_at');
+
+      const options = {
+        ...pagOptns,
+        include: [
+          {
+            model: ClientSpouse,
+            as: 'spouse',
+            attributes: { exclude: ['occupation_id'] },
+            include: [{ model: Occupation, as: 'occupation' }],
+          },
+          { model: LoanState, as: 'current_state' },
+          { model: Department, as: 'current_step' },
+          { model: LoanType, as: 'loan_type' },
+          { model: Identification },
+          { model: Education, as: 'education' },
+          { model: Occupation, as: 'occupation' },
+          { model: State, as: 'place_of_birth', attributes: ['id', 'name'] },
+          { model: Lga, as: 'lga', attributes: { exclude: ['state_id'] } },
+          {
+            model: BusinessEmployment,
+            as: 'business_employment',
+            include: [{ model: BusinessEmploymentType, as: 'business_employment_type' }],
+          },
+          { model: LoanDetail, as: 'loan_detail' },
+          { model: ClientBank, as: 'bank' },
+          { model: LoanLogs, as: 'logs' },
+        ],
+      };
+
+      const loanApp = await LoanApplication.paginate(options);
+
+      util.setPagination(new Paginate(loanApp, currentPage, defaultLimit));
+      util.setSuccess(200, 'successful', loanApp.docs);
+
+      return util.send(res);
+    } catch (error) {
+      return util.setError(error.statusCode || 400, error.message).send(res);
+    }
+  }
+
+
+  /**
+   * You can only assign within the current department
+   * @param loan_id
+   * @method POST user_id
+   * Admin activity
+   */
+  static async assignLoanToStaff(req, res) {
+    const { loan_id } = req.params;
+
+    try {
+      const payload = pick(req.body, ['assign_to']);
+      if (!payload.assign_to) throw new Error('Kind provide the user ID');
+
+      const loan = await LoanApplication.findOne({ where: { id: loan_id } });
+      if (!loan) throw new CustomError(`Loan application with ID ${loan_id} not found!`, 404);
+
+      if (loan.registration_status !== 'completed') {
+        throw new Error(`Loan application is still pending, please review and complete.`);
+      }
+
+      const CURRENT_STATE = loan.current_state.id;
+      const CURRENT_STAGE = loan.current_step.id;
+
+      const loanState = await LoanLogs.findOne({
+        where: { loan_id, to: CURRENT_STATE, desk: CURRENT_STAGE },
+      });
+      if (!loanState) throw new Error();
+
+      // check if user department belong current step
+      const user = await User.findOne({
+        where: { id: payload.user_id },
+        include: [{ model: Department, as: 'department', required: true }],
+      });
+
+      if (!user) throw new Error('User not found or not department attahed!');
+      if (user.department.id !== loan.current_step.id)
+        throw new Error("You can't assign to staff who is not in current department");
+
+      // update loan state
+      await loanState.update({ to_who: user.id }, {});
+
+      util.setSuccess(200, 'successful', {});
+      return util.send(res);
+    } catch (error) {
+      return util.setError(error.statusCode || 400, error.message).send(res);
+    }
+  }
+
+
+
+/******************************************
+FX Order
+*******************************************/
+
+Purchase deal slip
+--------------------
+- Date
+- Customer Name
+- Currency/Volume
+- Exchange Rate
+- Commission
+- Amount/Naira Value
+- Payment Mode: []
+  - Date
+  - Paying Bank
+  - Amount #
+- Receiving Bank: BankDetail
+- Beneficiary details: [BankDetail]
+
+----------------------
+Transfer Deal Slip
+----------------------
+
+- Deal Slip Number
+- Reference Number
+- Created Date
+
+- Customers name
+- Customers email
+- Customers phone No
+- Customer Address
+
+- Purpose
+
+- Currency/Volume
+- Exchange rate
+- Amount/Naira Value
+- Bank charge
+- Other charges
+- Naira value
+- Actual payment
+- Payment mode/details (RECEIVABLES IN STANBIC)
+- Name of Depositor (PARTPAYMENT PAID)
+- Reference if any (USD PAID FROM GTB)
+
+- Nature of beneficiary business
+- Beneficiary: BankDetail
+
+
+Bank Detail
+  - Bank Name
+  - Account Number
+  - Account Name
+  - Intermediary/correspondent Bank details
+  - Swift code
+  - Branch/Sort code
+  - Routing Number
+  - IBAN NUMBER
+
+Transaction Type:
+
+
+
+
+37607825
+36466621
+36834663
+
+
+Jobs
+=====
+https://spotifyjobs.com/
+
+https://www.builtinchicago.org/company/rise-buildings
+
+https://recruitingbypaycor.com/career/JobIntroduction.action?clientId=8a7883c66a3387ef016a5183d6f11208&id=8a7885a873a1ff990173b53f858b28e0&source=&lang=en
+
+https://www.diversifytech.co/job-board/software-development
+
+https://www.collage.com/careers
+
+https://aware3.com/careers/
+
+https://jobs.lever.co/curology
+
+https://jobs.lever.co/Readymetrics/bd3954e6-1f8e-4010-b9d8-a17abfdcd450
+
+https://www.provi.com/careers
+
+https://www.mmhmm.app/jobs/4767783002
+
+https://jobs.cisco.com/jobs/ProjectDetail/Full-Stack-Software-Engineer-MFA-Duo-Security/1305753
+
+https://happymoney.com/careers
+
+https://jobs.lever.co/wealthfront?lever-via=nvw91fUz1T
+
+https://jobs.lever.co/forto
+
+Canada Jobs (Full stack)
+https://athenasoftware.bamboohr.com/jobs/view.php?id=80
+https://plexxis-software.breezy.hr/p/24fe9126fa9a-software-engineer-intermediate-to-senior-only
+https://urbanlogiq.breezy.hr/p/b4459f4f4995-senior-software-engineer
+
+
+
+
+// [
+//   sequelize.literal(`(
+//     SELECT loan_amount AS amount, loan_purpose AS purpose
+//     FROM loan_detail
+//     WHERE
+//       loan_detail.id = loans.loan_detail_id
+//     )`),
+//   'loan_datail',
+// ],
+// 'status',
+// 'type',
+// 'loan_source_id',
+// 'created_at',
+
+
+
+
+[
+  (bytearray(b'3317bf1d-f381-4c24-845d-c7ec130033a4'), /id 0
+'19449995', -> ref_no 1
+b'Westcon group africa operations limnited', -> customer name 2
+'buy', -> transaction_type 3
+'EUR', -> currency 4
+Decimal('4000.00'), -> volume_purchased 5
+None, -> volume_sold 6
+Decimal('510.00'), -> rate 7
+'2040000.0000', -> total_amount_purchased 8
+' -   ', -> total_amount_sold 9
+'both', -> mode_of_payment 10
+'2500.00', -> cash_recieved 11
+'', -> cash_paid 12
+'', -> receiving_bank 13
+'', -> paying_bank 14
+datetime.datetime(2021, 7, 14, 21, 49, 3), -> created_at 15
+'completed') -> status 16
+]
+
+(
+'Euro', // name 0
+'EUR', // locale 1
+Decimal('4302500.00'), // stock_balance 2
+Decimal('222500.00'), // opening_balance 3
+Decimal('4302500.00'), // closing_balance 4
+Decimal('0.00'), // volume_sold 5
+Decimal('0.00'), // average_selling_rate 6
+Decimal('510.00'), // average_purchase_rate 7
+Decimal('-510.00'), // spread 8
+Decimal('0.00'), // profit 9
+datetime.datetime(2021, 7, 15, 1, 9, 59), // created_at 10
+datetime.datetime(2021, 7, 15, 1, 9, 59)), // updated_at 11
